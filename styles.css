@@ -1,0 +1,87 @@
+/* layout container */
+.game-area {
+  display: flex;
+  align-items: flex-start; /* scoreboard top aligned with canvas */
+  justify-content: center; /* center whole block horizontally */
+  gap: 20px;               /* space between scoreboard and canvas */
+  padding-top: 8px;
+}
+
+/* keep canvas visually identical */
+.canvas-wrap {
+  position: relative;
+  display: inline-block;
+}
+
+.rules-box {
+  position: absolute;
+  top: 120px;
+  left: 20px;
+  width: 260px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  font-family: sans-serif;
+}
+
+.rules-title {
+  margin: 0 0 10px 0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.rules-list {
+  margin: 0;
+  padding-left: 18px;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+
+/* scoreboard styling (outside canvas, left column) */
+.scoreboard {
+  width: 220px;
+  background: rgba(0,0,0,0.75);
+  color: #fff;
+  border-radius: 8px;
+  padding: 10px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 1.2;
+}
+
+/* Title */
+.scoreboard .title {
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+/* each row distributes name & value */
+.score-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4px 0;
+}
+
+/* name uses ellipsis if long */
+.score-row .name {
+  max-width: 120px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* score aligned right */
+.score-row .val {
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* small responsiveness */
+@media (max-width: 900px) {
+  .game-area { gap: 12px; }
+  .scoreboard { width: 180px; font-size: 13px; }
+}

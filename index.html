@@ -1,0 +1,39 @@
+<!-- this is index.html file -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplayer Coin Collector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="rules" class="rules-box">
+        <h2 class="rules-title">Game Rules</h2>
+        <ul class="rules-list">
+            <li>Move with Arrow Keys or W A S D.</li>
+            <li>A new coin appears every 3 seconds.</li>
+            <li>Collect coins by touching them.</li>
+            <li>Each coin = 1 point.</li>
+            <li>First to 5 points wins the game.</li>
+            <li>Game resets automatically after a win.</li>
+        </ul>
+    </div>
+
+    <!-- game screen -->
+    <div id="game-area" class="game-area">
+        <div id="scoreboard" class="scoreboard"></div>
+        <div id="status">Connecting to server...</div>
+
+        <div class="canvas-wrap">
+            <canvas id="game" width="800" height="600"></canvas>
+        </div>
+    </div>
+
+    <!-- Import Socket.io Client Library -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="client.js"></script>
+</body>
+</html>
