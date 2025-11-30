@@ -62,7 +62,7 @@ Minimalistic and readable design
 
 🎮 Gameplay Rules
 
-Move using Arrow Keys or W A S D
+Move using W A S D
 
 A new coin spawns every 3 seconds
 
