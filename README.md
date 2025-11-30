@@ -117,7 +117,7 @@ The problem statement suggests using different shapes for different players.
 In this implementation, all players have square shapes.
 
 Reason:
-Accurate authoritative collision detection across multiple geometric shapes (triangles, circles, squares) under simulated lag adds unnecessary complexity.
+Accurate authoritative collision detection across multiple geometric shapes (triangles, circles, squares, cubes etc) adds too much complexity and is difficult to achieve in the given time constraints.
 Uniform square players provide:
 
 deterministic collision checks
